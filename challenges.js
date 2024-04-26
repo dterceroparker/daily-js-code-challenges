@@ -230,7 +230,13 @@ removeEnds('a') //=> "" (empty string)
 -----------------------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
-
+function removeEnds(str) {
+  if (str.length < 3) {
+    return ('')
+  } else {
+    return str.slice(1, -1);
+  }
+}
 
 
 
