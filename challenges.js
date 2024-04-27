@@ -339,8 +339,6 @@ function formatWithPadding(num, char, numlength) {
     return char.repeat(paddingLength) + numStr
   }
 }
-
-
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -364,11 +362,18 @@ isPalindrome('A nut for a jar of tuna') //=> true
 isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
+//support: https://www.freecodecamp.org/news/two-ways-to-check-for-palindromes-in-javascript-64fea8191fd7///
 
-
-
-
-
+function isPalindrome(str) {
+  str = str.toLowerCase().replace(/(\W)|(\_)/g,"").split("");
+  for (let i = 0; i < str.length; i++) {
+    //if(str[0] !== str[15 - 1 - 0])? => if("a"  !==  "a")? // false
+      if (str[i] !== str[str.length - 1 -i]) {
+        return false;
+      }
+    }
+    return true;
+  }
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
 
