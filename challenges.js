@@ -421,7 +421,7 @@ function hammingDistance(str1, str2) {
   // } else if (str1.length !== str2.length) {
   //   return NaN;
   // }
-}
+  }
 }
 
 /*-----------------------------------------------------------------------------
