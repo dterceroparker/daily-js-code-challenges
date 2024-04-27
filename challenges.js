@@ -335,7 +335,7 @@ function formatWithPadding(num, char, numlength) {
   const paddingLength = numlength - numStr.length
   if (paddingLength <= 0) {
     return numStr
-  }  else {
+  }  else  {
     return char.repeat(paddingLength) + numStr
   }
 }
@@ -399,10 +399,30 @@ hammingDistance('!!!!', '****') //=> 4
 hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
+//Hamming Distance: The Hamming distance between two strings of equal length is defined as the number of positions at which the corresponding bits or characters are different. It measures the dissimilarity or the number of changes needed to transform one string into another.
+// function hammingDistance(str1, str2) {
+//   let symbolCount = 0;
+//   for (let ch of str1) {
+//     if (str2.includes(ch)) {
+//       return symbolCount++;
+//     } else if (str1.length !== str2.length) {
+//       return NaN;
+//     }
+//   } 
+// }
 
-
-
-
+function hammingDistance(str1, str2) {
+  let symbolCount = 0;
+  for (let i = 0; i < str1.length; i++) {
+    if (str1.charAt(i) !== str2.charAt(i)) {
+    symbolCount++;
+  }
+  return symbolCount;
+  // } else if (str1.length !== str2.length) {
+  //   return NaN;
+  // }
+}
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 13-mumble
