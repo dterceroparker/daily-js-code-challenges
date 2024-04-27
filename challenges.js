@@ -280,15 +280,27 @@ charCount('Today is fantastic!')
 
 function charCount(str) {
   let count = {}
-  for (let char of str) {
-    if (count[char] !== undefined) {
-      count[char]++
+  for (let i = 0; i < str.length; i++) {
+    if (count[str[i]] !== undefined) {
+      count[str[i]]++
     } else {
-      count[char] = 1
+      count[str[i]] =1
     }
   }
   return count
 }
+
+// function charCount(str) {
+//   let count = {}
+//   for (let char of str) {
+//     if (count[char] !== undefined) {
+//       count[char]++
+//     } else {
+//       count[char] = 1
+//     }
+//   }
+//   return count
+// }
 
 
 
@@ -318,9 +330,15 @@ formatWithPadding(42, '*', 10) //=> "********42"
 formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
-
-
-
+function formatWithPadding(num, char, numlength) { 
+  const numStr = num.toString()
+  const paddingLength = numlength - numStr.length
+  if (paddingLength <= 0) {
+    return numStr
+  }  else {
+    return char.repeat(paddingLength) + numStr
+  }
+}
 
 
 /*-----------------------------------------------------------------------------
