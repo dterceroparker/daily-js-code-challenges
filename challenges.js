@@ -447,7 +447,13 @@ mumble('121') //=> '1-22-111'
 mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
-
+function numble(str) {
+  let result = []
+  for (let i = 0; i < str.length;  i++) {
+    result.push(str[i].repeat(i + 1))
+  }
+  return result.join('-')
+}
 
 
 
