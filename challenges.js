@@ -414,15 +414,16 @@ hammingDistance('abc', 'ab') //=> NaN
 function hammingDistance(str1, str2) {
   let symbolCount = 0;
   for (let i = 0; i < str1.length; i++) {
-    if (str1.charAt(i) !== str2.charAt(i)) {
-    symbolCount++;
+    if (str1[i] !== str2[i]) {
+      symbolCount++
+    }
   }
-  return symbolCount;
-  // } else if (str1.length !== str2.length) {
-  //   return NaN;
-  // }
+  if (str1.length !== str2.length) {
+    return NaN
   }
+  return symbolCount
 }
+
 
 /*-----------------------------------------------------------------------------
 Challenge: 13-mumble
