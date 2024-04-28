@@ -418,10 +418,10 @@ function hammingDistance(str1, str2) {
       symbolCount++
     }
   }
-  if (str1.length !== str2.length) {
-    return NaN
-  }
-  return symbolCount
+    if (str1.length !== str2.length) {
+      return NaN
+    }
+    return symbolCount
 }
 
 
@@ -447,7 +447,7 @@ mumble('121') //=> '1-22-111'
 mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
-function numble(str) {
+function mumble(str) {
   let result = []
   for (let i = 0; i < str.length;  i++) {
     result.push(str[i].repeat(i + 1))
@@ -478,7 +478,19 @@ fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) //=> { a: 1, b: 2, c: 3 }
 fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sally", age: 24 }
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
-
+function fromPairs(arr) {
+  let result = {}
+  //manipulate existing variable
+  for (let i = 0; i < arr.length; i++) {
+    // console.log(arr[i])
+    // console.log(result)
+    let key = arr[i][0]
+    let value = arr[i][1]
+    // console.log(result)
+    result[key] = value
+  }
+  return result
+}
 
 
 
