@@ -573,16 +573,28 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
-function findHighestPriced(array) {
-  let highestNum = array
-  .sort((a, b) => a.price > b.price ? -1 : 1)
-  .find(el => {
-    if (highestNum.length === highestNum ) {
-      
-    }
-  })
+//Source: https://builtin.com/articles/javascript-array-max//
 
+function findHighestPriced(arr) {
+  let highestNum = arr[0]
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > highestNum) {
+      highestNum = arr.find(arr)
+    }
+  }
+  return highestNum
 }
+
+
+// function findHighestPriced(array) {
+//   let highestNum = array
+//   .sort((a, b) => a.price > b.price ? -1 : 1)
+//   .find(el => {
+//     if (highestNum.length === highestNum ) {
+
+//     }
+//   })
+// }
 // Step 1 find object that has the highest price (do not use find method) Sort by price
 //
 // price property holding numeric value
