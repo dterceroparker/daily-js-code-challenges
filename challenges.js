@@ -573,8 +573,20 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
+function findHighestPriced(array) {
+  let highestNum = array
+  .sort((a, b) => a.price > b.price ? -1 : 1)
+  .find(el => {
+    if (highestNum.length === highestNum ) {
+      
+    }
+  })
 
-
+}
+// Step 1 find object that has the highest price (do not use find method) Sort by price
+//
+// price property holding numeric value
+// should return object in the array w/ largest value held in array
 
 
 
