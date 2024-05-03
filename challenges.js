@@ -575,14 +575,10 @@ findHighestPriced([
 // Your solution for 16-findHighestPriced here:
 //Source: https://builtin.com/articles/javascript-array-max//
 
-function findHighestPriced(arr) {
-  let highestNum = arr[0]
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > highestNum) {
-      highestNum = arr.find(arr)
-    }
-  }
-  return highestNum
+
+function findHighestPriced(array) {
+  const sortedArray = array.slice().sort((a, b) => b.price - a.price)
+  return sortedArray.find((obj, index) => index === 0 || obj.price !== sortedArray[index - 1].price)
 }
 
 
