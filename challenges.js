@@ -575,28 +575,33 @@ findHighestPriced([
 // Your solution for 16-findHighestPriced here:
 //Source: https://builtin.com/articles/javascript-array-max//
 
+// function findHighestPriced(array) {
+//   const sortedArray = array.slice().sort((a, b) => b.price - a.price)
+//   return sortedArray.find((obj, index) => index === 0 || obj.price !== sortedArray[index - 1].price)
+// }
 
-function findHighestPriced(array) {
-  const sortedArray = array.slice().sort((a, b) => b.price - a.price)
-  return sortedArray.find((obj, index) => index === 0 || obj.price !== sortedArray[index - 1].price)
+
+// I am still working on understanding the answer above and find the Notion answer easier to understand and so I am including it below:
+function findHighestPriced(arr) {
+  let highNum = 0
+  arr.forEach(obj => {
+    if(obj.price > highNum) highNum = obj.price
+  })
+  return arr.find(obj => obj.price === highNum)
 }
 
+console.log(findHighestPriced([
+  { sku: 'a1', price: 25 },
+  { sku: 'b2', price: 50 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+]))
 
-// function findHighestPriced(array) {
-//   let highestNum = array
-//   .sort((a, b) => a.price > b.price ? -1 : 1)
-//   .find(el => {
-//     if (highestNum.length === highestNum ) {
-
-//     }
-//   })
-// }
-// Step 1 find object that has the highest price (do not use find method) Sort by price
-//
-// price property holding numeric value
-// should return object in the array w/ largest value held in array
-
-
+//checks if there is a difference in price from current idx (0) compared to last idx (-1)
+// variable = 0 
+// loop over the array and check if the price prop on the current obj > highNum
+// find() the first obj where price === highNum
+//sort does modify initial array // slice makes copy of original []
 
 /*-----------------------------------------------------------------------------
 Challenge: 17-mapArray
@@ -631,7 +636,13 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
-
+function mapArray(arr, fn) {
+  let newArray = [];
+  for (i = 0; i < arr.length; i++) {
+    
+  }
+  return newArray;
+}
 
 
 
