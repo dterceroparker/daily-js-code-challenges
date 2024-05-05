@@ -639,11 +639,15 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 function mapArray(arr, fn) {
   let newArray = [];
   for (i = 0; i < arr.length; i++) {
-    
+  // successfuly maps without using index
+  // successfuly maps using index
+    newArray.push(fn(arr[i]))
+    // console.log(newArray)
   }
   return newArray;
 }
 
+//Jackson suggested push method
 
 
 
