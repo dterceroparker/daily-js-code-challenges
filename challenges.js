@@ -694,10 +694,39 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //=> {"Yes": 2, "No": 1, "Maybe": 1}
 -----------------------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
+// successfully sums an array of numbers
+// considers index
+// counts votes
+// This is what Kibra and I were able to solve prior to watching Notion video:
+// function reduceArray(arr, fn, val) {
+//   let sum = 0;
+//   for (i = 0; i < arr.length; i++) {
+//     acc = fn(acc, el, i)
+//   }
+//   return sum
+// }
 
+//notion suggestion along with our current param and argu naming convention// assumes initialValue is provided which is not always the case
+//https://www.youtube.com/watch?v=t40ERtZ70Xw&list=PL2Kp3FX7ViJiN7dN_yPQM-1jdd4lBH_uZ&index=8
+function reduceArray(arr, fn, val) {
+  arr.forEach((el, i) => {
+    // arguments inside of fn()
+    val = fn(val, el, i)
+  })
+  return val
+}
 
+//Notion video notes:
+//fn last returns value
+//acc = initialValue
+//loop over array and invoke fn for each element
+// fn args: acc, currentElement, index
+//acc = return of fn
+//return acc
 
-
+// coins.reduce( (accumulator, currentElement)=> {
+//   return accumulator + currentElement
+// }, 0);
 /*-----------------------------------------------------------------------------
 Challenge: 19-isPrime
 
