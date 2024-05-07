@@ -766,11 +766,11 @@ isPrime(200) //=> false
 // Your solution for 19-isPrime here:
 //resource: https://stackoverflow.com/questions/40200089/check-number-prime-in-javascript
 
-function isPrime(int) {
-  if (int < 2 ) return false;
-  if (Math.floor(int) !== int) return false;
-  for (i = 2; i < int - 1 ; i++) {
-    if (int % i === 0) return false;
+function isPrime(num) {
+  if (num < 2 ) return false;
+  if (Math.floor(num) !== num) return false;
+  for (i = 2; i < num - 1 ; i++) {
+    if (num % i === 0) return false;
   }
   return true;
 }
