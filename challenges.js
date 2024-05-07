@@ -648,6 +648,21 @@ function mapArray(arr, fn) {
   return newArray;
 }
 
+// console.log(mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
+//   return `${i + 1} - ${f}`
+// } ))
+
+// Seun's solution which helps me understand
+// function mapArray(array, callback) {
+//   let newArray = []
+//   let index = 0
+//   for (const element of array) {
+//     newArray.push(callback(element, index))
+//     index++
+//   }
+//   return newArray
+// }
+
 /*-----------------------------------------------------------------------------
 Challenge: 18-reduceArray
 
@@ -749,11 +764,19 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 19-isPrime here:
+//resource: https://stackoverflow.com/questions/40200089/check-number-prime-in-javascript
+
+function isPrime(int) {
+  if (int < 2 ) return false;
+  if (Math.floor(int) !== int) return false;
+  for (i = 2; i < int - 1 ; i++) {
+    if (int % i === 0) return false;
+  }
+  return true;
+}
 
 
-
-
-
+// if (int < 2 || Math.floor(int) !== int) return false;
 /*-----------------------------------------------------------------------------
 Challenge: 20-intersection
 
