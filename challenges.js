@@ -769,7 +769,7 @@ isPrime(200) //=> false
 function isPrime(num) {
   if (num < 2 ) return false;
   if (Math.floor(num) !== num) return false;
-  for (i = 2; i < num - 1 ; i++) {
+  for (i = 2; i < num; i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -801,9 +801,12 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------------------*/
 // Your solution for 20-intersection here:
+function intersection(arr1, arr2) {
+  let newArray = []
+  for (i = 0; i < arr1.length; i++) {
 
-
-
-
+  }
+  return newArray;
+}
 
 /*---------------------------------------------------------------------------*/
