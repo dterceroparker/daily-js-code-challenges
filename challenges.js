@@ -769,7 +769,7 @@ intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 
 function intersection(arr1, arr2) {
   let newArray = []
-  if(arr1.length >= arr2.length) {
+  if (arr1.length >= arr2.length) {
     newArray = arr2.filter(value => arr1.includes(value))
   } else {
     newArray = arr1.filter(value => arr2.includes(value))
