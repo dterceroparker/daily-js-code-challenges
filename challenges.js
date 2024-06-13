@@ -33,12 +33,10 @@ addOne(1) //=> 2
 addOne(-5) //=> -4
 -----------------------------------------------------------------------------*/
 // Your solution for 01-addOne here:
+
 function addOne(num) {
   return num + 1
 }
-
-
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 02-addTwoNumbers
@@ -59,13 +57,11 @@ addTwoNumbers(0, 0) //=> 0
 addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
+
 function addTwoNumbers(num1, num2) {
   if (isNaN(num1) || isNaN(num2)) return NaN
   return num1 + num2
 }
-
-
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 03-sumNumbers
@@ -118,6 +114,7 @@ addList(1,50,1.23) //=> 52.23
 addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
+
 function addList(...nums) {
   if (nums.length === 0) {
     return 0
@@ -156,6 +153,7 @@ function computeRemainder(num1, num2) {
     return num1 % num2
   } 
 }
+
 /*-----------------------------------------------------------------------------
 Challenge: 06-range
 
@@ -178,6 +176,7 @@ range(1,1) //=> []
 range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
+
 function range(num1, num2) {
   let result = []
   for (let i = num1; i < num2; i++) {
@@ -211,7 +210,6 @@ function reverseUpcaseString(str) {
 }
 reverseUpcaseString("SEI Rocks!")
 
-
 /*-----------------------------------------------------------------------------
 Challenge: 08-removeEnds
 
@@ -237,8 +235,6 @@ function removeEnds(str) {
     return str.slice(1, -1);
   }
 }
-
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 09-charCount
@@ -290,21 +286,6 @@ function charCount(str) {
   return count
 }
 
-// function charCount(str) {
-//   let count = {}
-//   for (let char of str) {
-//     if (count[char] !== undefined) {
-//       count[char]++
-//     } else {
-//       count[char] = 1
-//     }
-//   }
-//   return count
-// }
-
-
-
-
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
@@ -330,6 +311,7 @@ formatWithPadding(42, '*', 10) //=> "********42"
 formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
+
 function formatWithPadding(num, char, numlength) { 
   const numStr = num.toString()
   const paddingLength = numlength - numStr.length
@@ -339,6 +321,7 @@ function formatWithPadding(num, char, numlength) {
     return char.repeat(paddingLength) + numStr
   }
 }
+
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
 
@@ -362,7 +345,8 @@ isPalindrome('A nut for a jar of tuna') //=> true
 isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
-//support: https://www.freecodecamp.org/news/two-ways-to-check-for-palindromes-in-javascript-64fea8191fd7///
+
+//Guidance: https://www.freecodecamp.org/news/two-ways-to-check-for-palindromes-in-javascript-64fea8191fd7///
 
 function isPalindrome(str) {
   str = str.toLowerCase().replace(/(\W)|(\_)/g,"").split("");
@@ -374,6 +358,7 @@ function isPalindrome(str) {
     }
     return true;
   }
+
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
 
@@ -399,17 +384,8 @@ hammingDistance('!!!!', '****') //=> 4
 hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
+
 //Hamming Distance: The Hamming distance between two strings of equal length is defined as the number of positions at which the corresponding bits or characters are different. It measures the dissimilarity or the number of changes needed to transform one string into another.
-// function hammingDistance(str1, str2) {
-//   let symbolCount = 0;
-//   for (let ch of str1) {
-//     if (str2.includes(ch)) {
-//       return symbolCount++;
-//     } else if (str1.length !== str2.length) {
-//       return NaN;
-//     }
-//   } 
-// }
 
 function hammingDistance(str1, str2) {
   let symbolCount = 0;
@@ -423,7 +399,6 @@ function hammingDistance(str1, str2) {
     }
     return symbolCount
 }
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 13-mumble
@@ -447,6 +422,7 @@ mumble('121') //=> '1-22-111'
 mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
+
 function mumble(str) {
   let result = []
   for (let i = 0; i < str.length;  i++) {
@@ -454,9 +430,6 @@ function mumble(str) {
   }
   return result.join('-')
 }
-
-
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
@@ -478,6 +451,7 @@ fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) //=> { a: 1, b: 2, c: 3 }
 fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sally", age: 24 }
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
+
 function fromPairs(arr) {
   let result = {}
   //manipulate existing variable
@@ -491,9 +465,6 @@ function fromPairs(arr) {
   }
   return result
 }
-
-
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
@@ -521,6 +492,7 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 //=> {a: 1, b: 22, c: 3, d: 44}
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
+
 function mergeObjects(obj1, ...objs) {
   objs.forEach(obj => {
     for (let prop in obj) {
@@ -529,12 +501,6 @@ function mergeObjects(obj1, ...objs) {
 })
   return obj1
 }
-
-
-
-
-
-
 
 /*-----------------------------------------------------------------------------
 Challenge: 16-findHighestPriced
@@ -573,6 +539,7 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
+
 //Source: https://builtin.com/articles/javascript-array-max//
 
 // function findHighestPriced(array) {
@@ -581,7 +548,8 @@ findHighestPriced([
 // }
 
 
-// I am still working on understanding the answer above and find the Notion answer easier to understand and so I am including it below:
+// Note: I am still working on understanding the answer above and find the Notion answer easier to understand and so I am including it below:
+
 function findHighestPriced(arr) {
   let highNum = 0
   arr.forEach(obj => {
@@ -597,7 +565,7 @@ console.log(findHighestPriced([
   { sku: 'd4', price: 10 }
 ]))
 
-//checks if there is a difference in price from current idx (0) compared to last idx (-1)
+//Additional notes: checks if there is a difference in price from current idx (0) compared to last idx (-1)
 // variable = 0 
 // loop over the array and check if the price prop on the current obj > highNum
 // find() the first obj where price === highNum
@@ -636,12 +604,13 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
+
 function mapArray(arr, fn) {
   let newArray = [];
   for (i = 0; i < arr.length; i++) {
   // fn element in the array
-  // successfuly maps without using index
-  // successfuly maps using index
+  // successfully maps without using index
+  // successfully maps using index
     newArray.push(fn(arr[i], i))
     // console.log(newArray)
   }
@@ -652,7 +621,7 @@ function mapArray(arr, fn) {
 //   return `${i + 1} - ${f}`
 // } ))
 
-// Seun's solution which helps me understand
+// Additional Solution:
 // function mapArray(array, callback) {
 //   let newArray = []
 //   let index = 0
@@ -709,10 +678,8 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //=> {"Yes": 2, "No": 1, "Maybe": 1}
 -----------------------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
-// successfully sums an array of numbers
-// considers index
-// counts votes
-// This is what Kibra and I were able to solve prior to watching Notion video:
+
+// This is what classmate and I were able to solve prior to watching Notion's video:
 // function reduceArray(arr, fn, val) {
 //   let sum = 0;
 //   for (i = 0; i < arr.length; i++) {
@@ -721,8 +688,9 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //   return sum
 // }
 
-//notion suggestion along with our current param and argu naming convention// assumes initialValue is provided which is not always the case
+//Notion lesson suggestion along with our current param and argu naming convention// assumes initialValue is provided which is not always the case
 //https://www.youtube.com/watch?v=t40ERtZ70Xw&list=PL2Kp3FX7ViJiN7dN_yPQM-1jdd4lBH_uZ&index=8
+
 function reduceArray(arr, fn, val) {
   arr.forEach((el, i) => {
     // arguments inside of fn()
@@ -739,9 +707,6 @@ function reduceArray(arr, fn, val) {
 //acc = return of fn
 //return acc
 
-// coins.reduce( (accumulator, currentElement)=> {
-//   return accumulator + currentElement
-// }, 0);
 /*-----------------------------------------------------------------------------
 Challenge: 19-isPrime
 
@@ -764,7 +729,7 @@ isPrime(29) //=> true
 isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 19-isPrime here:
-//resource: https://stackoverflow.com/questions/40200089/check-number-prime-in-javascript
+//Guidance: https://stackoverflow.com/questions/40200089/check-number-prime-in-javascript
 
 function isPrime(num) {
   if (num < 2 ) return false;
@@ -775,8 +740,8 @@ function isPrime(num) {
   return true;
 }
 
-
 // if (int < 2 || Math.floor(int) !== int) return false;
+
 /*-----------------------------------------------------------------------------
 Challenge: 20-intersection
 
@@ -801,12 +766,27 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------------------*/
 // Your solution for 20-intersection here:
+
 function intersection(arr1, arr2) {
   let newArray = []
-  for (i = 0; i < arr1.length; i++) {
-
+  if(arr1.length >= arr2.length) {
+    newArray = arr2.filter(value => arr1.includes(value))
+  } else {
+    newArray = arr1.filter(value => arr2.includes(value))
   }
-  return newArray;
+  return newArray
 }
+
+//First solution but it does not return correct intersection:
+// function intersection(arr1, arr2) {
+//   let newArray = []
+//   for (let i = 0; i < arr1.length; i++) {
+//     let sharedArray = arr1[i]
+//     if (arr2.includes(sharedArray)) {
+//       newArray.push(sharedArray)
+//     }
+//   }
+//   return newArray
+// }
 
 /*---------------------------------------------------------------------------*/
